@@ -206,6 +206,18 @@ html[data-theme="dark"] .btn-primary { color: #10131f; }
 
 .frame-caption { font-size: 12px; color: var(--text-2); }
 
+/* ---------- trust strip ---------- */
+.trust { padding: 0 0 16px; }
+.trust-inner {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 22px; border-radius: var(--r);
+  background: var(--surface); border: 1px solid var(--line);
+}
+.trust-ico { font-size: 20px; line-height: 1.4; flex: none; }
+.trust p { font-size: 15px; color: var(--text-2); }
+.trust strong { color: var(--text); font-weight: 500; }
+.trust a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
 /* ---------- sections ---------- */
 .section { padding: 88px 0; }
 .section-alt { background: var(--bg-alt); }
