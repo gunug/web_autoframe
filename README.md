@@ -8,7 +8,11 @@ AutoFrame(안드로이드 디지털 액자 앱) 랜딩 페이지.
 
 ```
 index.html      한국어 랜딩 페이지
+privacy.html    한국어 개인정보 처리방침
+terms.html      한국어 이용약관
 en/index.html   영어 랜딩 페이지
+en/privacy.html 영어 개인정보 처리방침
+en/terms.html   영어 이용약관
 css/style.css   공용 스타일 (라이트/다크 테마, 반응형)
 js/main.js      공용 스크립트 (테마 토글, 스크롤 리빌, 히어로 슬라이드쇼, FAQ)
 assets/         로고·OG 이미지

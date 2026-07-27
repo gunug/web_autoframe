@@ -322,6 +322,54 @@ html[data-theme="dark"] .badge { color: #10131f; }
 .footer-links a:hover { color: var(--text); }
 .copy { margin-left: auto; font-size: 13px; color: var(--text-2); }
 
+/* ---------- legal pages ---------- */
+.legal { padding: 56px 0 88px; }
+.legal-head { padding-bottom: 22px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.legal-head h1 { font-size: clamp(26px, 4vw, 36px); }
+.legal-meta { margin-top: 10px; font-size: 14px; color: var(--text-2); }
+
+.legal-body h2 {
+  font-size: 20px; text-align: left; margin-top: 44px;
+  padding-top: 4px; scroll-margin-top: 84px;
+}
+.legal-body h3 { font-size: 16px; margin-top: 24px; }
+.legal-body p { margin-top: 12px; color: var(--text-2); font-size: 15px; }
+.legal-body ul { margin: 12px 0 0; padding-left: 20px; color: var(--text-2); font-size: 15px; }
+.legal-body li { margin-top: 7px; }
+.legal-body li::marker { color: var(--brand); }
+.legal-body strong { color: var(--text); font-weight: 500; }
+.legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+
+.legal-body code, .legal-meta code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em; padding: 2px 6px; border-radius: 6px;
+  background: var(--bg-alt); border: 1px solid var(--line); word-break: break-all;
+}
+
+.legal-table { width: 100%; overflow-x: auto; margin-top: 16px; }
+.legal-table table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 460px; }
+.legal-table th, .legal-table td {
+  text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top;
+}
+.legal-table th { font-weight: 500; color: var(--text); background: var(--bg-alt); }
+.legal-table td { color: var(--text-2); }
+
+.note {
+  margin-top: 20px; padding: 16px 18px; border-radius: 12px;
+  background: var(--bg-alt); border: 1px solid var(--line);
+  font-size: 14px; color: var(--text-2);
+}
+
+.legal-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 48px; }
+
+/* legal link buttons on the landing page footer */
+.legal-links { display: flex; flex-wrap: wrap; gap: 10px; width: 100%; }
+.btn-outline {
+  padding: 9px 18px; font-size: 14px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text-2);
+}
+.btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
 /* ---------- reveal ---------- */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.in { opacity: 1; transform: none; }
