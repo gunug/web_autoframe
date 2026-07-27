@@ -32,7 +32,12 @@ python -m http.server 8000
 
 ## 배포
 
-정적 호스팅(GitHub Pages, Cloudflare Pages 등)에 루트 그대로 올리면 됩니다.
+GitHub Pages(`main` 브랜치 루트)로 배포됩니다. 커스텀 도메인은 `CNAME` 파일에 있습니다.
+
+- 한국어: https://autoframe.onethelab.com/
+- English: https://autoframe.onethelab.com/en/
+- 개인정보 처리방침: https://autoframe.onethelab.com/privacy.html
+- 이용약관: https://autoframe.onethelab.com/terms.html
 
 ## 앱
 
