@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoFrame — A digital photo frame that plays your family photos</title>
+<meta name="description" content="Turn a spare tablet into a family photo frame. Photos and videos from your own Google Drive play automatically, with ages and anniversary counters right on the photo.">
+<meta name="theme-color" content="#3949AB">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="ko" href="../">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="x-default" href="../">
+<meta property="og:title" content="AutoFrame — Family digital photo frame">
+<meta property="og:description" content="Turn a spare tablet into a family photo frame. Photos play automatically, with ages shown on each photo.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/feature.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#features">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img src="../assets/mark.svg" alt="" width="32" height="32">
+      <span>AutoFrame</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../" hreflang="ko" data-lang-switch="ko">KO</a>
+        <a class="is-on" href="./" aria-current="page" hreflang="en">EN</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Get it</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Android · tablet · phone</p>
+        <h1>A <span class="grad">digital frame</span><br>for your family photos</h1>
+        <p class="lead">
+          Turn that spare tablet into a living-room frame.
+          Photos and videos you upload to your own Google Drive fade from one to the next,
+          with each person's age and anniversary counters shown right on the photo.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <ul class="hero-facts">
+          <li>Stored in <strong>your Drive</strong></li>
+          <li><strong>Photos + videos</strong></li>
+          <li><strong>English / 한국어</strong></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="frame" id="frame">
+          <div class="frame-screen">
+            <div class="slides" id="slides">
+              <figure class="slide is-active" style="--a:#ffd9a8; --b:#ff9e7d">
+                <figcaption><span class="date">May 12, 2024</span><span class="tag">Jiwoo · 3y 2m</span></figcaption>
+              </figure>
+              <figure class="slide" style="--a:#bfe0ff; --b:#7aa8ff">
+                <figcaption><span class="date">Sep 3, 2023</span><span class="tag">Wedding · 8y 4m</span></figcaption>
+              </figure>
+              <figure class="slide" style="--a:#d9f0d0; --b:#8fc99a">
+                <figcaption><span class="date">Jan 1, 2025</span><span class="tag">Grandma · 71</span></figcaption>
+              </figure>
+            </div>
+            <div class="frame-dots" id="dots" aria-hidden="true"></div>
+          </div>
+        </div>
+        <p class="frame-caption">Screen mock — colors stand in for real photos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <h2 class="reveal">Only what a frame needs</h2>
+      <p class="section-lead reveal">No fiddly setup. Leave it on and it keeps going.</p>
+
+      <!-- basic -->
+      <div class="sub-head reveal">
+        <h3 class="sub-title">Basic features</h3>
+        <span class="chip chip-free">Free</span>
+        <p class="sub-desc">Everything a frame needs, working the moment you install it.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <div class="ico">🖼️</div>
+          <h4>Automatic slideshow</h4>
+          <p>Photos crossfade to the next one on a timer. One tap puts the device into frame mode.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">📤</div>
+          <h4>Upload photos &amp; videos</h4>
+          <p>Pick many at once from your gallery. Files are stored in your own Google Drive.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">▶️</div>
+          <h4>Video playback</h4>
+          <p>Videos play through to the end before moving on, and you can mute or unmute mid-play.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">🔄</div>
+          <h4>New photos picked up live</h4>
+          <p>Anything you upload while the slideshow runs is added automatically, with a banner to tell you.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">🔍</div>
+          <h4>Photo preview</h4>
+          <p>Tap a thumbnail in the grid to open it large, then pinch to zoom in and out.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">📊</div>
+          <h4>Drive usage &amp; delete</h4>
+          <p>See used space, total space and a usage gauge — and select multiple photos to delete yourself.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">🔆</div>
+          <h4>Keep screen awake</h4>
+          <p>The display stays on so it can run around the clock, with guidance on battery-optimization exemptions.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico">🌐</div>
+          <h4>English / 한국어</h4>
+          <p>Switch language in settings and every screen updates instantly — no restart needed.</p>
+        </article>
+      </div>
+
+      <!-- premium -->
+      <div class="sub-head sub-head-premium reveal">
+        <h3 class="sub-title">Premium features</h3>
+        <span class="chip chip-premium">Premium</span>
+        <p class="sub-desc">For keeping the frame running longer, and looking better.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card card-premium reveal">
+          <div class="ico">✨</div>
+          <h4>Remove the watermark</h4>
+          <p>The AutoFrame watermark disappears from the slideshow. Nothing but the photo.</p>
+        </article>
+        <article class="card card-premium reveal">
+          <div class="ico">🎂</div>
+          <h4>People &amp; events</h4>
+          <p>Register birthdays and event dates, and each photo shows the age at capture plus the time elapsed today.</p>
+        </article>
+        <article class="card card-premium reveal">
+          <div class="ico">🛡️</div>
+          <h4>Protect photos</h4>
+          <p>Mark the ones that matter as protected and they're excluded from auto-clean and bulk delete.</p>
+        </article>
+        <article class="card card-premium reveal">
+          <div class="ico">🧹</div>
+          <h4>Quick storage cleanup</h4>
+          <p>Keep only the most recent N items, or auto-remove the oldest once usage passes your threshold.</p>
+        </article>
+        <article class="card card-premium reveal">
+          <div class="ico">⚙️</div>
+          <h4>Slideshow settings</h4>
+          <p>Tune the transition interval and whether overlay text appears — and how large it is.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="section section-alt">
+    <div class="wrap">
+      <h2 class="reveal">Three steps, that's it</h2>
+      <p class="section-lead reveal">Five minutes after installing, there's a frame in your living room.</p>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-no">1</span>
+          <h3>Sign in with a shared account</h3>
+          <p>Use a Google account dedicated to the family frame. No account yet? You can create one straight from the app.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-no">2</span>
+          <h3>Upload photos and tag them</h3>
+          <p>Send up a batch from your gallery. Register people and events once, and ages and counters are calculated for you.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-no">3</span>
+          <h3>Start the slideshow and prop it up</h3>
+          <p>One tap on Slideshow. Set the spare tablet on a stand and the family frame is done.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <div class="wrap">
+      <h2 class="reveal">Pricing</h2>
+      <p class="section-lead reveal">Try it free, upgrade when you like it.</p>
+
+      <div class="price-grid">
+        <article class="price reveal">
+          <h3>Monthly</h3>
+          <p class="amount">₩900</p>
+          <p class="per">Billed every month</p>
+          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Start in the app</a>
+        </article>
+
+        <article class="price is-best reveal">
+          <span class="badge">Most popular</span>
+          <h3>Yearly</h3>
+          <p class="amount">₩7,900</p>
+          <p class="per">One year · about ₩658/month</p>
+          <a class="btn btn-primary btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Start in the app</a>
+        </article>
+
+        <article class="price reveal">
+          <h3>Lifetime</h3>
+          <p class="amount">₩14,900</p>
+          <p class="per">Pay once, keep it</p>
+          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Start in the app</a>
+        </article>
+      </div>
+
+      <p class="price-note reveal">
+        On the free plan the slideshow shows a watermark and the Premium features above stay locked.
+        Payment is handled by Google Play, and purchases can be restored in the app. Prices are subject to change.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-alt">
+    <div class="wrap wrap-narrow">
+      <h2 class="reveal">Frequently asked</h2>
+
+      <div class="faq" id="faq-list">
+        <details class="reveal">
+          <summary>Where are my photos stored?</summary>
+          <p>In your own Google Drive. AutoFrame is a frame that <em>shows</em> photos — it is not a backup service and does not take responsibility for storing them. Keep your originals elsewhere.</p>
+        </details>
+        <details class="reveal">
+          <summary>Does it play videos?</summary>
+          <p>Yes. In the slideshow a video plays to the end before the next item, and you can toggle mute while it plays.</p>
+        </details>
+        <details class="reveal">
+          <summary>How is the age on a photo calculated?</summary>
+          <p>It compares the person's date of birth with the photo's capture date to show the <strong>age at capture</strong>, alongside their <strong>age today</strong>. Events work the same way for elapsed time. People and events are a Premium feature.</p>
+        </details>
+        <details class="reveal">
+          <summary>What if my Drive fills up?</summary>
+          <p>The usage gauge shows where you stand, and you can select and delete photos yourself. Keeping only the most recent N and threshold-based auto-clean are Premium features. Deletion is permanent and cannot be undone.</p>
+        </details>
+        <details class="reveal">
+          <summary>Is it safe to leave running all day?</summary>
+          <p>There's a keep-screen-awake option, and the app explains how to exempt itself from battery optimization for long runs. Keeping it plugged in is recommended.</p>
+        </details>
+        <details class="reveal">
+          <summary>Which devices are supported?</summary>
+          <p>Android phones, tablets and foldables. The grid adds columns automatically as the window gets wider.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>That tablet in the drawer, a family frame today</h2>
+      <p>Free to install. A handful of photos is all you need to start.</p>
+      <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Get it on Google Play</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/mark.svg" alt="" width="28" height="28">
+      <span>AutoFrame</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="../">한국어</a>
+      <a href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play</a>
+    </nav>
+    <p class="copy">© <span id="year">2026</span> OneTheLab · AutoFrame</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
