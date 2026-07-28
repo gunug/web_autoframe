@@ -51,40 +51,6 @@
     Array.prototype.forEach.call(items, function (el) { io.observe(el); });
   }
 
-  /* ---- hero slideshow mock ---- */
-  var slides = Array.prototype.slice.call(document.querySelectorAll('#slides .slide'));
-  var dotsBox = document.getElementById('dots');
-
-  if (slides.length > 1) {
-    var idx = 0;
-    var dots = slides.map(function (_, i) {
-      var d = document.createElement('span');
-      if (i === 0) d.className = 'on';
-      if (dotsBox) dotsBox.appendChild(d);
-      return d;
-    });
-
-    var show = function (n) {
-      slides[idx].classList.remove('is-active');
-      dots[idx].classList.remove('on');
-      idx = n % slides.length;
-      slides[idx].classList.add('is-active');
-      dots[idx].classList.add('on');
-    };
-
-    if (!reduceMotion) {
-      var timer = setInterval(function () { show(idx + 1); }, 3800);
-      document.addEventListener('visibilitychange', function () {
-        if (document.hidden) {
-          clearInterval(timer);
-        } else {
-          clearInterval(timer);
-          timer = setInterval(function () { show(idx + 1); }, 3800);
-        }
-      });
-    }
-  }
-
   /* ---- faq: one open at a time ---- */
   var faqs = document.querySelectorAll('#faq-list details');
   Array.prototype.forEach.call(faqs, function (d) {
