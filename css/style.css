@@ -216,6 +216,8 @@ html[data-theme="dark"] .btn-primary { color: #10131f; }
 .section-alt { background: var(--bg-alt); }
 .section h2 { font-size: clamp(26px, 3.4vw, 36px); text-align: center; }
 .section-lead { text-align: center; color: var(--text-2); margin-top: 12px; }
+.section-note { text-align: center; color: var(--text-2); margin-top: 28px; font-size: 15px; }
+.section-note a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
 
 .grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -417,7 +419,7 @@ html[data-theme="dark"] .badge { color: #10131f; }
 .legal-body strong { color: var(--text); font-weight: 500; }
 .legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
 
-.legal-body code, .legal-meta code {
+.legal-body code, .legal-meta code, .card code, .section-note code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: .9em; padding: 2px 6px; border-radius: 6px;
   background: var(--bg-alt); border: 1px solid var(--line); word-break: break-all;

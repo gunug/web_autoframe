@@ -82,6 +82,7 @@
     <nav class="nav-links">
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
+      <a href="#data">Permissions</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -282,8 +283,46 @@
     </div>
   </section>
 
+  <!-- DATA -->
+  <section id="data" class="section">
+    <div class="wrap">
+      <h2 class="reveal">The <span class="grad">Google permissions</span> we ask for, and why</h2>
+      <p class="section-lead reveal">These are all of the permissions AutoFrame requests on your Google Account.</p>
+
+      <div class="grid">
+        <article class="card reveal" style="--c:#3B82F6">
+          <span class="ico"><svg class="ic"><use href="#i-upload"/></svg></span>
+          <h4>Drive file access <code>drive.file</code></h4>
+          <p>
+            Needed to upload the photos and videos you want on the frame to <strong>your own Google Drive</strong>, load them back for the slideshow, and delete them from inside the app.
+            This scope only covers <strong>files AutoFrame created or that you picked in the app</strong>. It cannot read anything else already in your Drive.
+          </p>
+        </article>
+        <article class="card reveal" style="--c:#8B5CF6">
+          <span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <h4>Basic account info <code>openid</code> <code>email</code> <code>profile</code></h4>
+          <p>
+            Needed to show which account the frame is currently running on and to identify the Drive account the photos are stored in.
+            We request no other Google data — no contacts, calendar, mail, or photo library.
+          </p>
+        </article>
+        <article class="card reveal" style="--c:#14B8A6">
+          <span class="ico"><svg class="ic"><use href="#i-lock"/></svg></span>
+          <h4>Nothing is stored on our servers</h4>
+          <p>
+            Your photos, videos, and the people and anniversary settings all stay in your own Google Drive.
+            AutoFrame runs no server of its own, and does not collect, transfer, or sell your Google data. There are no ad or analytics SDKs in the app.
+            Signing out in the app, or revoking access in your Google Account settings, ends the connection.
+          </p>
+        </article>
+      </div>
+
+      <p class="section-note reveal">Full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
   <!-- PRICING -->
-  <section id="pricing" class="section">
+  <section id="pricing" class="section section-alt">
     <div class="wrap">
       <h2 class="reveal">Pricing</h2>
       <p class="section-lead reveal">Try it free, upgrade when you like it.</p>
@@ -320,7 +359,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section section-alt">
+  <section id="faq" class="section">
     <div class="wrap wrap-narrow">
       <h2 class="reveal">Frequently asked</h2>
 
@@ -372,6 +411,7 @@
     </div>
     <nav class="footer-links">
       <a href="#features">Features</a>
+      <a href="#data">Permissions</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="../">한국어</a>
