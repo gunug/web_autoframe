@@ -448,8 +448,10 @@ html[data-theme="dark"] .badge { color: #10131f; }
 .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
 
 /* ---------- reveal ---------- */
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* .js is set by an inline script in <head>; without JS the content stays visible
+   so crawlers and screenshot-based reviewers never see a blank page. */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {
@@ -479,5 +481,5 @@ html[data-theme="dark"] .badge { color: #10131f; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 1; transform: none; }
 }
