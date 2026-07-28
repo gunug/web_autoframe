@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AutoFrame — 가족 사진을 자동으로 보여주는 디지털 액자</title>
-<meta name="description" content="안 쓰는 태블릿을 가족 액자로. 내 Google Drive의 사진·동영상이 자동으로 넘어가고, 아이 나이와 기념일 경과 시간이 함께 표시됩니다.">
+<title>AutoFrame — A digital photo frame that plays your family photos</title>
+<meta name="description" content="Turn a spare tablet into a family photo frame. Photos and videos from your own Google Drive play automatically, with ages and anniversary counters right on the photo.">
 <meta name="theme-color" content="#3949AB">
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="ko" href="./">
-<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="ko" href="ko/">
+<link rel="alternate" hreflang="en" href="./">
 <link rel="alternate" hreflang="x-default" href="./">
-<meta property="og:title" content="AutoFrame — 가족 사진 디지털 액자">
-<meta property="og:description" content="안 쓰는 태블릿을 가족 액자로. 사진이 자동으로 넘어가고 아이 나이가 함께 표시됩니다.">
+<meta property="og:title" content="AutoFrame — Family digital photo frame">
+<meta property="og:description" content="Turn a spare tablet into a family photo frame. Photos play automatically, with ages shown on each photo.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/feature.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +71,7 @@
   </symbol>
 </svg>
 
-<a class="skip" href="#features">본문 바로가기</a>
+<a class="skip" href="#features">Skip to content</a>
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
@@ -80,21 +80,21 @@
       <span>AutoFrame</span>
     </a>
     <nav class="nav-links">
-      <a href="#features">기능</a>
-      <a href="#how">사용법</a>
-      <a href="#data">권한</a>
-      <a href="#pricing">가격</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#data">Permissions</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-actions">
-      <div class="lang" role="group" aria-label="언어 선택">
-        <a class="is-on" href="./" aria-current="page" hreflang="ko">KO</a>
-        <a href="en/" hreflang="en" data-lang-switch="en">EN</a>
+      <div class="lang" role="group" aria-label="Language">
+        <a href="ko/" hreflang="ko" data-lang-switch="ko">KO</a>
+        <a class="is-on" href="./" aria-current="page" hreflang="en">EN</a>
       </div>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="테마 전환">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
         <span class="theme-icon" aria-hidden="true">◐</span>
       </button>
-      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">받기</a>
+      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Get it</a>
     </div>
   </div>
 </header>
@@ -105,22 +105,22 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Android · 태블릿 · 폰</p>
+        <p class="eyebrow">Android · tablet · phone</p>
         <h1>AutoFrame</h1>
-        <p class="hero-tagline">가족 사진을 보여주는<br><span class="grad">디지털 액자</span></p>
+        <p class="hero-tagline">A <span class="grad">digital frame</span><br>for your family photos</p>
         <p class="lead">
-          <strong>AutoFrame</strong>은 안 쓰는 안드로이드 태블릿을 거실 디지털 액자로 바꿔주는 앱입니다.
-          내 Google Drive에 올린 사진·동영상이 부드럽게 넘어가고,
-          사진 위에 아이 나이와 기념일 경과 시간이 함께 뜹니다.
+          <strong>AutoFrame</strong> is an Android app that turns a spare tablet into a living-room digital photo frame.
+          Photos and videos you upload to your own Google Drive fade from one to the next,
+          with each person's age and anniversary counters shown right on the photo.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play에서 받기</a>
-          <a class="btn btn-ghost" href="#how">사용법 보기</a>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
         </div>
         <ul class="hero-facts">
-          <li><strong>내 Drive</strong>에 저장</li>
-          <li><strong>사진 + 동영상</strong> 재생</li>
-          <li><strong>한국어 / English</strong></li>
+          <li>Stored in <strong>your Drive</strong></li>
+          <li><strong>Photos + videos</strong></li>
+          <li><strong>English / 한국어</strong></li>
         </ul>
       </div>
 
@@ -132,10 +132,10 @@
                  srcset="assets/screens/slideshow-800.jpg 800w, assets/screens/slideshow-1600.jpg 1600w"
                  sizes="(max-width: 900px) 100vw, 440px"
                  width="1600" height="916"
-                 alt="태블릿에 띄운 AutoFrame 슬라이드쇼 화면 — 유모차에 앉은 아기 사진이 전체 화면으로 표시되고 있다">
+                 alt="The AutoFrame slideshow running full screen on a tablet, showing a baby sitting in a stroller">
           </div>
         </div>
-        <p class="frame-caption">실제 앱 화면에 가상의 AI 아기 사진으로 만들어진 목업입니다</p>
+        <p class="frame-caption">A mockup: the real app screen, filled with AI-generated baby photos</p>
       </div>
     </div>
   </section>
@@ -146,13 +146,13 @@
       <div class="trust-inner reveal">
         <span class="trust-ico" aria-hidden="true"><svg class="ic"><use href="#i-lock"/></svg></span>
         <p>
-          AutoFrame은 모든 데이터를 <strong>이용자 본인의 Google 계정</strong>에 기록합니다.
-          회사는 별도의 서버를 운영하거나 이용자의 사진·데이터를 저장하지 않으며, 광고·분석 SDK도 사용하지 않습니다.
-          사용하는 Google API는 <strong>Google Drive API</strong> 하나이며,
-          <code>drive.file</code> 범위로 <strong>AutoFrame이 업로드했거나 이용자가 앱에서 직접 고른 파일만</strong> 읽고 씁니다.
-          Google 로그인(OAuth)은 사진·동영상을 이용자 본인의 Drive에 올리고 액자에서 다시 불러오기 위해 필요하며,
-          그 외의 Drive 파일·연락처·캘린더·메일은 요청하지도, 읽지도 않습니다.
-          <a href="#data">권한 자세히 보기</a> · <a href="privacy.html">개인정보 처리방침</a>
+          AutoFrame records all of its data in <strong>your own Google account</strong>.
+          We run no servers of our own, store none of your photos or data, and ship no advertising or analytics SDKs.
+          The only Google API we use is the <strong>Google Drive API</strong>, through the <code>drive.file</code> scope, which reads and writes
+          <strong>only the files AutoFrame uploaded or that you picked in the app</strong>.
+          Signing in with Google (OAuth) is what lets the app put your photos and videos in your own Drive and load them back onto the frame;
+          nothing else in your Drive — and no contacts, calendar, or mail — is requested or read.
+          <a href="#data">See the permissions</a> · <a href="privacy.html">Privacy Policy</a>
         </p>
       </div>
     </div>
@@ -161,92 +161,92 @@
   <!-- FEATURES -->
   <section id="features" class="section section-aurora">
     <div class="wrap">
-      <h2 class="reveal">액자에 <span class="grad">필요한 것만</span></h2>
-      <p class="section-lead reveal">복잡한 설정 없이, 켜두면 계속 돌아갑니다.</p>
+      <h2 class="reveal">Only what <span class="grad">a frame needs</span></h2>
+      <p class="section-lead reveal">No fiddly setup. Leave it on and it keeps going.</p>
 
-      <!-- 기본 -->
+      <!-- basic -->
       <div class="sub-head reveal">
-        <h3 class="sub-title">기본 기능</h3>
-        <span class="chip chip-free">무료</span>
-        <p class="sub-desc">설치만 하면 바로 쓸 수 있는 액자의 기본기.</p>
+        <h3 class="sub-title">Basic features</h3>
+        <span class="chip chip-free">Free</span>
+        <p class="sub-desc">Everything a frame needs, working the moment you install it.</p>
       </div>
 
       <div class="grid">
         <article class="card reveal" style="--c:#F5A524">
           <span class="ico"><svg class="ic"><use href="#i-photo"/></svg></span>
-          <h4>자동 슬라이드쇼</h4>
-          <p>일정 시간마다 크로스페이드로 부드럽게 전환. 탭 한 번으로 액자 모드가 켜집니다.</p>
+          <h4>Automatic slideshow</h4>
+          <p>Photos crossfade to the next one on a timer. One tap puts the device into frame mode.</p>
         </article>
         <article class="card reveal" style="--c:#3B82F6">
           <span class="ico"><svg class="ic"><use href="#i-upload"/></svg></span>
-          <h4>사진 · 동영상 올리기</h4>
-          <p>갤러리에서 여러 장을 한 번에 업로드. 파일은 본인 Google Drive에 저장됩니다.</p>
+          <h4>Upload photos &amp; videos</h4>
+          <p>Pick many at once from your gallery. Files are stored in your own Google Drive.</p>
         </article>
         <article class="card reveal" style="--c:#8B5CF6">
           <span class="ico"><svg class="ic"><use href="#i-play"/></svg></span>
-          <h4>동영상 재생</h4>
-          <p>영상은 끝까지 재생한 뒤 다음 항목으로. 재생 중 음소거를 켜고 끌 수 있습니다.</p>
+          <h4>Video playback</h4>
+          <p>Videos play through to the end before moving on, and you can mute or unmute mid-play.</p>
         </article>
         <article class="card reveal" style="--c:#14B8A6">
           <span class="flag">NEW</span>
           <span class="ico"><svg class="ic"><use href="#i-refresh"/></svg></span>
-          <h4>새 사진 자동 반영</h4>
-          <p>슬라이드쇼 중 새로 올린 사진이 자동으로 목록에 추가되고 안내 배너가 뜹니다.</p>
+          <h4>New photos picked up live</h4>
+          <p>Anything you upload while the slideshow runs is added automatically, with a banner to tell you.</p>
         </article>
         <article class="card reveal" style="--c:#38BDF8">
           <span class="ico"><svg class="ic"><use href="#i-search"/></svg></span>
-          <h4>사진 미리보기</h4>
-          <p>격자에서 사진을 탭하면 크게 열리고 확대·축소할 수 있습니다.</p>
+          <h4>Photo preview</h4>
+          <p>Tap a thumbnail in the grid to open it large, then pinch to zoom in and out.</p>
         </article>
         <article class="card reveal" style="--c:#F59E0B">
           <span class="ico"><svg class="ic"><use href="#i-gauge"/></svg></span>
-          <h4>Drive 용량 확인 · 삭제</h4>
-          <p>사용량 / 전체 용량 / 사용률 게이지 표시. 여러 사진을 골라 직접 삭제도 가능합니다.</p>
+          <h4>Drive usage &amp; delete</h4>
+          <p>See used space, total space and a usage gauge — and select multiple photos to delete yourself.</p>
         </article>
         <article class="card reveal" style="--c:#FB923C">
           <span class="ico"><svg class="ic"><use href="#i-sun"/></svg></span>
-          <h4>화면 꺼짐 방지</h4>
-          <p>액자처럼 24시간 켜둘 수 있게 화면 유지. 배터리 최적화 예외 안내도 함께 제공합니다.</p>
+          <h4>Keep screen awake</h4>
+          <p>The display stays on so it can run around the clock, with guidance on battery-optimization exemptions.</p>
         </article>
         <article class="card reveal" style="--c:#6366F1">
           <span class="ico"><svg class="ic"><use href="#i-globe"/></svg></span>
-          <h4>한국어 / English</h4>
-          <p>설정에서 언어를 바꾸면 앱 재시작 없이 모든 화면에 바로 적용됩니다.</p>
+          <h4>English / 한국어</h4>
+          <p>Switch language in settings and every screen updates instantly — no restart needed.</p>
         </article>
       </div>
 
-      <!-- 프리미엄 -->
+      <!-- premium -->
       <div class="sub-head sub-head-premium reveal">
-        <h3 class="sub-title"><span class="grad-premium">프리미엄</span> 기능</h3>
+        <h3 class="sub-title"><span class="grad-premium">Premium</span> features</h3>
         <span class="chip chip-premium"><svg class="ic"><use href="#i-crown"/></svg>Premium</span>
-        <p class="sub-desc">액자를 오래, 예쁘게 쓰기 위한 기능들.</p>
+        <p class="sub-desc">For keeping the frame running longer, and looking better.</p>
       </div>
 
       <div class="grid grid-premium">
         <article class="card card-premium reveal" style="--c:#A855F7">
           <span class="ico"><svg class="ic"><use href="#i-sparkle"/></svg></span>
-          <h4>워터마크 제거</h4>
-          <p>슬라이드쇼 화면의 AutoFrame 워터마크가 사라집니다. 사진만 깨끗하게.</p>
+          <h4>Remove the watermark</h4>
+          <p>The AutoFrame watermark disappears from the slideshow. Nothing but the photo.</p>
         </article>
         <article class="card card-premium reveal" style="--c:#FB923C">
           <span class="ico"><svg class="ic"><use href="#i-cake"/></svg></span>
-          <h4>인물 &amp; 이벤트</h4>
-          <p>인물의 생년월일, 이벤트 기준일을 등록하면 촬영 당시 나이와 현재 기준 경과 시간이 사진 위에 표시됩니다.</p>
+          <h4>People &amp; events</h4>
+          <p>Register birthdays and event dates, and each photo shows the age at capture plus the time elapsed today.</p>
         </article>
         <article class="card card-premium reveal" style="--c:#3B82F6">
           <span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span>
-          <h4>사진 보호</h4>
-          <p>중요한 사진을 보호해 두면 자동 정리와 일괄 삭제에서 제외됩니다.</p>
+          <h4>Protect photos</h4>
+          <p>Mark the ones that matter as protected and they're excluded from auto-clean and bulk delete.</p>
         </article>
         <article class="card card-premium reveal" style="--c:#22C55E">
           <span class="ico"><svg class="ic"><use href="#i-broom"/></svg></span>
-          <h4>간편 저장공간 관리</h4>
-          <p>최근 N장만 남기고 정리, 사용률이 임계값을 넘으면 오래된 사진부터 자동 정리.</p>
+          <h4>Quick storage cleanup</h4>
+          <p>Keep only the most recent N items, or auto-remove the oldest once usage passes your threshold.</p>
         </article>
         <article class="card card-premium reveal" style="--c:#6366F1">
           <span class="ico"><svg class="ic"><use href="#i-gear"/></svg></span>
-          <h4>슬라이드쇼 설정</h4>
-          <p>전환 주기, 사진 위 글씨 표시 여부와 크기를 취향대로 조절할 수 있습니다.</p>
+          <h4>Slideshow settings</h4>
+          <p>Tune the transition interval and whether overlay text appears — and how large it is.</p>
         </article>
       </div>
     </div>
@@ -255,24 +255,24 @@
   <!-- HOW -->
   <section id="how" class="section section-alt">
     <div class="wrap">
-      <h2 class="reveal">세 단계면 끝</h2>
-      <p class="section-lead reveal">설치하고 5분이면 거실에 액자가 생깁니다.</p>
+      <h2 class="reveal">Three steps, that's it</h2>
+      <p class="section-lead reveal">Five minutes after installing, there's a frame in your living room.</p>
 
       <ol class="steps">
         <li class="step reveal">
           <span class="step-no">1</span>
-          <h3>전용 계정으로 로그인</h3>
-          <p>가족 공용 액자용 Google 계정으로 로그인합니다. 계정이 없으면 앱에서 바로 만들 수 있습니다.</p>
+          <h3>Sign in with a shared account</h3>
+          <p>Use a Google account dedicated to the family frame. No account yet? You can create one straight from the app.</p>
         </li>
         <li class="step reveal">
           <span class="step-no">2</span>
-          <h3>사진 올리고 태그 달기</h3>
-          <p>갤러리에서 여러 장을 한 번에 업로드. 인물·이벤트를 등록해 두면 나이와 경과 시간이 자동 계산됩니다.</p>
+          <h3>Upload photos and tag them</h3>
+          <p>Send up a batch from your gallery. Register people and events once, and ages and counters are calculated for you.</p>
         </li>
         <li class="step reveal">
           <span class="step-no">3</span>
-          <h3>슬라이드쇼 켜고 세워두기</h3>
-          <p>슬라이드쇼 버튼 한 번. 안 쓰는 태블릿을 거치대에 올려두면 가족 액자 완성입니다.</p>
+          <h3>Start the slideshow and prop it up</h3>
+          <p>One tap on Slideshow. Set the spare tablet on a stand and the family frame is done.</p>
         </li>
       </ol>
 
@@ -282,8 +282,8 @@
              srcset="assets/screens/library-800.jpg 800w, assets/screens/library-1600.jpg 1600w"
              sizes="(max-width: 900px) 100vw, 900px"
              width="1600" height="999" loading="lazy" decoding="async"
-             alt="AutoFrame 사진 목록 화면. 격자로 정렬된 가족 사진 위에 갤러리 선택 창이 열려 있다">
-        <figcaption>사진 목록 화면 — 갤러리에서 여러 장을 골라 한 번에 올립니다.<br>실제 앱 화면에 가상의 AI 아기 사진으로 만들어진 목업입니다.</figcaption>
+             alt="The AutoFrame library screen: family photos in a grid with the gallery picker open on top">
+        <figcaption>The library screen — pick a batch from your gallery and upload it in one go.<br>A mockup: the real app screen, filled with AI-generated baby photos.</figcaption>
       </figure>
     </div>
   </section>
@@ -291,74 +291,74 @@
   <!-- DATA -->
   <section id="data" class="section">
     <div class="wrap">
-      <h2 class="reveal">요청하는 <span class="grad">Google 권한</span>과 그 이유</h2>
-      <p class="section-lead reveal">AutoFrame이 Google 계정에 요청하는 권한은 아래가 전부입니다.</p>
+      <h2 class="reveal">The <span class="grad">Google permissions</span> we ask for, and why</h2>
+      <p class="section-lead reveal">These are all of the permissions AutoFrame requests on your Google Account.</p>
 
       <div class="grid">
         <article class="card reveal" style="--c:#3B82F6">
           <span class="ico"><svg class="ic"><use href="#i-upload"/></svg></span>
-          <h4>Drive 파일 접근 <code>drive.file</code></h4>
+          <h4>Drive file access <code>drive.file</code></h4>
           <p>
-            액자에 띄울 사진·동영상을 <strong>이용자 본인의 Google Drive</strong>에 올리고, 슬라이드쇼로 다시 불러오고, 앱에서 지우기 위해 필요합니다.
-            이 권한은 <strong>AutoFrame이 만들었거나 이용자가 앱에서 직접 고른 파일에만</strong> 적용됩니다. Drive에 이미 들어 있는 다른 사진·문서는 읽을 수 없습니다.
+            Needed to upload the photos and videos you want on the frame to <strong>your own Google Drive</strong>, load them back for the slideshow, and delete them from inside the app.
+            This scope only covers <strong>files AutoFrame created or that you picked in the app</strong>. It cannot read anything else already in your Drive.
           </p>
         </article>
         <article class="card reveal" style="--c:#8B5CF6">
           <span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span>
-          <h4>기본 계정 정보 <code>openid</code> <code>email</code> <code>profile</code></h4>
+          <h4>Basic account info <code>openid</code> <code>email</code> <code>profile</code></h4>
           <p>
-            지금 어느 계정으로 액자가 돌아가는지 앱에 표시하고, 사진을 저장할 Drive 계정을 특정하기 위해 필요합니다.
-            연락처·캘린더·메일·사진 보관함 등 다른 Google 데이터는 요청하지 않습니다.
+            Needed to show which account the frame is currently running on and to identify the Drive account the photos are stored in.
+            We request no other Google data — no contacts, calendar, mail, or photo library.
           </p>
         </article>
         <article class="card reveal" style="--c:#14B8A6">
           <span class="ico"><svg class="ic"><use href="#i-lock"/></svg></span>
-          <h4>회사 서버에는 저장하지 않습니다</h4>
+          <h4>Nothing is stored on our servers</h4>
           <p>
-            사진·동영상과 인물·기념일 설정은 전부 이용자 본인의 Google Drive에 남습니다.
-            AutoFrame은 별도 서버를 운영하지 않고, 이용자의 Google 데이터를 수집·전송·판매하지 않으며, 광고·분석 SDK도 넣지 않았습니다.
-            앱에서 로그아웃하거나 Google 계정 설정에서 접근을 해제하면 연결이 끊깁니다.
+            Your photos, videos, and the people and anniversary settings all stay in your own Google Drive.
+            AutoFrame runs no server of its own, and does not collect, transfer, or sell your Google data. There are no ad or analytics SDKs in the app.
+            Signing out in the app, or revoking access in your Google Account settings, ends the connection.
           </p>
         </article>
       </div>
 
-      <p class="section-note reveal">자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>에 있습니다.</p>
+      <p class="section-note reveal">Full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
   </section>
 
   <!-- PRICING -->
   <section id="pricing" class="section section-alt">
     <div class="wrap">
-      <h2 class="reveal">가격</h2>
-      <p class="section-lead reveal">무료로 써보고, 마음에 들면 프리미엄으로.</p>
+      <h2 class="reveal">Pricing</h2>
+      <p class="section-lead reveal">Try it free, upgrade when you like it.</p>
 
       <div class="price-grid">
         <article class="price reveal">
-          <h3>월</h3>
-          <p class="amount">900<span>원</span></p>
-          <p class="per">매월 결제</p>
-          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">앱에서 시작</a>
+          <h3>Monthly</h3>
+          <p class="amount">₩900</p>
+          <p class="per">Billed every month</p>
+          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Start in the app</a>
         </article>
 
         <article class="price is-best reveal">
-          <span class="badge">가장 인기</span>
-          <h3>연</h3>
-          <p class="amount">7,900<span>원</span></p>
-          <p class="per">1년 · 월 약 658원</p>
-          <a class="btn btn-primary btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">앱에서 시작</a>
+          <span class="badge">Most popular</span>
+          <h3>Yearly</h3>
+          <p class="amount">₩7,900</p>
+          <p class="per">One year · about ₩658/month</p>
+          <a class="btn btn-primary btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Start in the app</a>
         </article>
 
         <article class="price reveal">
-          <h3>평생</h3>
-          <p class="amount">14,900<span>원</span></p>
-          <p class="per">한 번 결제, 계속 사용</p>
-          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">앱에서 시작</a>
+          <h3>Lifetime</h3>
+          <p class="amount">₩14,900</p>
+          <p class="per">Pay once, keep it</p>
+          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Start in the app</a>
         </article>
       </div>
 
       <p class="price-note reveal">
-        무료 버전에서는 슬라이드쇼에 워터마크가 표시되고 위 프리미엄 기능이 잠깁니다.
-        결제는 Google Play를 통해 처리되며, 구매는 앱 내에서 복원할 수 있습니다. 가격은 변경될 수 있습니다.
+        On the free plan the slideshow shows a watermark and the Premium features above stay locked.
+        Payment is handled by Google Play, and purchases can be restored in the app. Prices are subject to change.
       </p>
     </div>
   </section>
@@ -366,32 +366,32 @@
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="wrap wrap-narrow">
-      <h2 class="reveal">자주 묻는 질문</h2>
+      <h2 class="reveal">Frequently asked</h2>
 
       <div class="faq" id="faq-list">
         <details class="reveal">
-          <summary>사진은 어디에 저장되나요?</summary>
-          <p>본인 Google Drive에 저장됩니다. AutoFrame은 사진을 <em>보여주는</em> 액자이며 별도 저장·백업을 책임지지 않습니다. 원본은 따로 보관하세요.</p>
+          <summary>Where are my photos stored?</summary>
+          <p>In your own Google Drive. AutoFrame is a frame that <em>shows</em> photos — it is not a backup service and does not take responsibility for storing them. Keep your originals elsewhere.</p>
         </details>
         <details class="reveal">
-          <summary>동영상도 되나요?</summary>
-          <p>됩니다. 슬라이드쇼에서 영상은 끝까지 재생된 뒤 다음 항목으로 넘어가고, 재생 중 음소거를 켜고 끌 수 있습니다.</p>
+          <summary>Does it play videos?</summary>
+          <p>Yes. In the slideshow a video plays to the end before the next item, and you can toggle mute while it plays.</p>
         </details>
         <details class="reveal">
-          <summary>사진 위 나이는 어떻게 계산되나요?</summary>
-          <p>인물의 생년월일과 사진 촬영일을 비교해 <strong>촬영 당시 나이</strong>를, 오늘 날짜 기준으로 <strong>현재 나이</strong>를 함께 보여줍니다. 이벤트도 같은 방식으로 경과 시간을 표시합니다. 인물·이벤트 기능은 프리미엄입니다.</p>
+          <summary>How is the age on a photo calculated?</summary>
+          <p>It compares the person's date of birth with the photo's capture date to show the <strong>age at capture</strong>, alongside their <strong>age today</strong>. Events work the same way for elapsed time. People and events are a Premium feature.</p>
         </details>
         <details class="reveal">
-          <summary>Drive 용량이 꽉 차면요?</summary>
-          <p>사용량 게이지로 상태를 확인하고 직접 골라 지울 수 있습니다. 최근 N장만 남기기와 임계값 자동 정리는 프리미엄 기능입니다. 삭제는 영구적이라 복구되지 않습니다.</p>
+          <summary>What if my Drive fills up?</summary>
+          <p>The usage gauge shows where you stand, and you can select and delete photos yourself. Keeping only the most recent N and threshold-based auto-clean are Premium features. Deletion is permanent and cannot be undone.</p>
         </details>
         <details class="reveal">
-          <summary>계속 켜두면 문제 없나요?</summary>
-          <p>화면 꺼짐 방지 기능이 있고, 오래 켜둘 때 안정적으로 동작하도록 배터리 최적화 예외 등록을 안내합니다. 전원은 연결해 두는 걸 권장합니다.</p>
+          <summary>Is it safe to leave running all day?</summary>
+          <p>There's a keep-screen-awake option, and the app explains how to exempt itself from battery optimization for long runs. Keeping it plugged in is recommended.</p>
         </details>
         <details class="reveal">
-          <summary>어떤 기기에서 쓸 수 있나요?</summary>
-          <p>Android 폰·태블릿·폴더블을 지원합니다. 화면 폭에 맞춰 격자 열 수가 자동으로 늘어납니다.</p>
+          <summary>Which devices are supported?</summary>
+          <p>Android phones, tablets and foldables. The grid adds columns automatically as the window gets wider.</p>
         </details>
       </div>
     </div>
@@ -400,9 +400,9 @@
   <!-- CTA -->
   <section class="cta">
     <div class="wrap cta-inner reveal">
-      <h2>서랍 속 태블릿, 오늘부터 가족 액자로</h2>
-      <p>설치는 무료. 사진 몇 장이면 바로 시작할 수 있습니다.</p>
-      <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play에서 받기</a>
+      <h2>That tablet in the drawer, a family frame today</h2>
+      <p>Free to install. A handful of photos is all you need to start.</p>
+      <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Get it on Google Play</a>
     </div>
   </section>
 
@@ -415,18 +415,18 @@
       <span>AutoFrame</span>
     </div>
     <nav class="footer-links">
-      <a href="#features">기능</a>
-      <a href="#data">권한</a>
-      <a href="#pricing">가격</a>
+      <a href="#features">Features</a>
+      <a href="#data">Permissions</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="en/" hreflang="en">English</a>
+      <a href="ko/" hreflang="ko">한국어</a>
       <a href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play</a>
     </nav>
     <div class="legal-links">
-      <a class="btn btn-outline" href="privacy.html">개인정보 처리방침</a>
-      <a class="btn btn-outline" href="terms.html">이용약관</a>
+      <a class="btn btn-outline" href="privacy.html">Privacy Policy</a>
+      <a class="btn btn-outline" href="terms.html">Terms of Service</a>
     </div>
-    <p class="copy">© <span id="year">2026</span> 원더랩(OneTheLab) · AutoFrame</p>
+    <p class="copy">© <span id="year">2026</span> OneTheLab · AutoFrame</p>
   </div>
 </footer>
 

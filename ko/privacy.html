@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보 처리방침 — AutoFrame</title>
+<meta name="description" content="AutoFrame 앱의 개인정보 처리방침. 수집 항목, 보관 위치, 이용 목적, 제3자 제공, 사용자 권리 안내.">
+<meta name="theme-color" content="#3949AB">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="ko" href="privacy.html">
+<link rel="alternate" hreflang="en" href="../privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <img src="../assets/mark.svg" alt="" width="32" height="32">
+      <span>AutoFrame</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#features">기능</a>
+      <a href="index.html#pricing">가격</a>
+      <a href="terms.html">이용약관</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="언어 선택">
+        <a class="is-on" href="privacy.html" aria-current="page" hreflang="ko">KO</a>
+        <a href="../privacy.html" hreflang="en">EN</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="테마 전환">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap wrap-narrow">
+
+    <div class="legal-head">
+      <h1>개인정보 처리방침</h1>
+      <p class="legal-meta">제공자: 원더랩(OneTheLab) · 서비스명: AutoFrame (Android 앱, <code>com.onethelab.autoframe</code>)<br>
+        시행일: 2026년 7월 27일 · 최종 수정일: 2026년 7월 27일</p>
+    </div>
+
+    <div class="legal-body">
+
+      <p>원더랩(OneTheLab, 이하 "회사")은 AutoFrame(이하 "앱")을 제공하면서 이용자의 개인정보를 소중히 다룹니다.
+        본 방침은 앱이 어떤 정보를 다루고, 어디에 저장하며, 이용자가 어떤 권리를 갖는지 설명합니다.</p>
+
+      <div class="note">
+        <strong>핵심 요약.</strong> AutoFrame은 <strong>모든 데이터를 이용자 본인의 Google 계정에 기록하며,
+        회사는 별도의 서버를 운영하거나 이용자 데이터를 저장하지 않습니다.</strong>
+        이용자의 사진·동영상과 액자 설정은 이용자 본인의 Google Drive에, 로그인 토큰 등 일부 항목은
+        이용자 기기 내부에만 저장됩니다. 회사는 이용자의 사진을 수집하거나 열람하지 않으며,
+        광고·분석 SDK를 사용하지 않습니다.
+      </div>
+
+      <h2 id="s0">0. 데이터 저장 위치에 관한 원칙</h2>
+      <p>앱은 회사가 운영하는 어떠한 서버와도 통신하지 않습니다. 앱이 접속하는 외부 주소는
+        Google 로그인(<code>accounts.google.com</code>)과 Google Drive API(<code>www.googleapis.com</code>) 뿐이며,
+        이용자의 사진·동영상·태그·설정은 모두 <strong>이용자 본인의 Google 계정</strong>에 기록됩니다.</p>
+      <ul>
+        <li>회사는 이용자의 데이터를 수집·전송·보관하는 서버를 운영하지 않습니다.</li>
+        <li>따라서 이용자가 앱 사용을 중단하더라도 회사가 보유하는 이용자 데이터는 존재하지 않습니다.</li>
+        <li>다만 로그인 토큰, 프리미엄 보유 여부, 일부 앱 설정과 진단 로그는 <strong>이용자 기기 내부</strong>에 저장되며,
+          로그아웃 또는 앱 삭제 시 함께 삭제됩니다.</li>
+      </ul>
+
+      <h2 id="s1">1. 처리하는 정보와 목적</h2>
+
+      <div class="legal-table">
+        <table>
+          <thead>
+            <tr><th>구분</th><th>항목</th><th>목적</th><th>보관 위치</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>계정 정보</td>
+              <td>Google 계정 식별자, 이메일 주소, 프로필 기본 정보</td>
+              <td>로그인 상태 표시, Drive 접근 권한 확인</td>
+              <td>이용자 기기(보안 저장소)</td>
+            </tr>
+            <tr>
+              <td>인증 토큰</td>
+              <td>ID 토큰, 갱신(refresh) 토큰</td>
+              <td>재로그인 없이 Drive 접근 유지</td>
+              <td>이용자 기기(보안 저장소)</td>
+            </tr>
+            <tr>
+              <td>미디어</td>
+              <td>이용자가 직접 올린 사진·동영상</td>
+              <td>슬라이드쇼 표시, 미리보기</td>
+              <td>이용자 본인의 Google Drive</td>
+            </tr>
+            <tr>
+              <td>액자 설정</td>
+              <td>인물·이벤트(이름, 기준일), 사진별 태그, 전환 주기 등</td>
+              <td>사진 위 나이·경과 시간 표시, 슬라이드쇼 동작</td>
+              <td>이용자 Drive의 설정 파일 및 기기</td>
+            </tr>
+            <tr>
+              <td>결제 상태</td>
+              <td>프리미엄 보유 여부(참/거짓)</td>
+              <td>프리미엄 기능 잠금 해제</td>
+              <td>이용자 기기(보안 저장소)</td>
+            </tr>
+            <tr>
+              <td>진단 기록</td>
+              <td>앱 동작 로그(오류 메시지 등)</td>
+              <td>문제 확인 및 디버그 화면 표시</td>
+              <td>이용자 기기(앱 삭제 시 소멸)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>위 정보는 모두 앱 기능 제공을 위해서만 사용되며, 회사 서버로 전송되지 않습니다.</p>
+
+      <h2 id="s2">2. Google 계정 및 Drive 권한</h2>
+      <p>앱은 Google OAuth 2.0을 통해 아래 범위(scope)의 권한만 요청합니다.</p>
+      <ul>
+        <li><code>openid</code>, <code>email</code>, <code>profile</code> — 로그인한 계정을 식별하고 화면에 표시하기 위해 사용합니다.</li>
+        <li><code>https://www.googleapis.com/auth/drive.file</code> — <strong>앱이 직접 만들거나 앱을 통해 올린 파일에만</strong> 접근합니다.
+          이용자가 Drive에 이미 가지고 있던 다른 파일은 앱이 읽을 수 없습니다.</li>
+      </ul>
+      <p>Google 사용자 데이터의 이용은 <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 서비스 사용자 데이터 정책</a>의
+        제한적 사용(Limited Use) 요건을 준수합니다. 앱은 Google 사용자 데이터를 광고 목적으로 사용하거나 제3자에게 판매하지 않으며,
+        사람이 열람하지 않습니다.</p>
+
+      <h2 id="s3">3. 앱 권한</h2>
+      <ul>
+        <li><strong>인터넷</strong> — Google 로그인 및 Drive 통신에 필요합니다.</li>
+        <li><strong>배터리 최적화 예외</strong> — 액자를 장시간 켜둘 때 앱이 중단되지 않도록 이용자가 선택적으로 허용합니다. 거부해도 앱은 동작합니다.</li>
+        <li><strong>사진 선택</strong> — Android 시스템 사진 선택기를 사용하므로 저장소 전체 접근 권한은 요구하지 않습니다. 이용자가 고른 항목만 앱에 전달됩니다.</li>
+      </ul>
+
+      <h2 id="s4">4. 제3자 제공 및 처리 위탁</h2>
+      <p>회사는 이용자 정보를 제3자에게 판매하거나 제공하지 않습니다. 다만 앱 동작에 다음 서비스가 관여합니다.</p>
+      <ul>
+        <li><strong>Google LLC</strong> — 계정 인증 및 Drive 저장. 이용자와 Google 사이의 관계이며 Google의 정책이 적용됩니다.</li>
+        <li><strong>Google Play 결제</strong> — 프리미엄 구매·구독 처리. 카드번호 등 결제수단 정보는 Google이 처리하며 앱은 이를 수집하거나 저장하지 않습니다.</li>
+      </ul>
+      <p>앱에는 광고 네트워크, 사용자 행동 분석, 크래시 리포팅 SDK가 포함되어 있지 않습니다.</p>
+
+      <h2 id="s5">5. 보관 기간과 파기</h2>
+      <ul>
+        <li>기기에 저장된 토큰·설정·로그는 <strong>로그아웃 또는 앱 삭제 시</strong> 함께 삭제됩니다.</li>
+        <li>Drive에 올린 사진·동영상은 이용자 소유이며, 앱을 삭제해도 Drive에 그대로 남습니다. 필요 시 Drive에서 직접 삭제하세요.</li>
+        <li>앱 내에서 사진을 삭제하면 Drive에서 <strong>영구 삭제</strong>되며 복구되지 않습니다.</li>
+      </ul>
+
+      <h2 id="s6">6. 이용자의 권리</h2>
+      <ul>
+        <li><strong>열람·정정·삭제</strong> — 사진과 설정은 앱과 Google Drive에서 직접 확인·수정·삭제할 수 있습니다.</li>
+        <li><strong>권한 철회</strong> — <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google 계정 &gt; 서드파티 앱 및 서비스</a>에서 AutoFrame의 접근 권한을 언제든 해제할 수 있습니다.</li>
+        <li><strong>로그아웃</strong> — 앱에서 로그아웃하면 기기에 저장된 토큰이 삭제됩니다.</li>
+      </ul>
+
+      <h2 id="s7">7. 아동의 개인정보</h2>
+      <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 직접 정보를 수집하지 않습니다.
+        가족 사진에 아동이 포함될 수 있으나, 해당 사진의 업로드와 태그 입력은 계정 보유자인 보호자의 판단과 책임 아래 이루어집니다.</p>
+
+      <h2 id="s8">8. 안전성 확보 조치</h2>
+      <ul>
+        <li>인증 토큰과 결제 상태는 Android 보안 저장소(Keystore 기반 암호화 영역)에 저장됩니다.</li>
+        <li>Google과의 모든 통신은 HTTPS로 암호화됩니다.</li>
+        <li>회사는 이용자의 사진·동영상을 수집·저장·열람하지 않으므로, 회사 측 유출 위험이 구조적으로 존재하지 않습니다.</li>
+      </ul>
+
+      <h2 id="s9">9. 방침의 변경</h2>
+      <p>본 방침이 변경되는 경우 본 페이지에 수정된 내용과 시행일을 게시합니다.
+        중요한 변경은 앱 업데이트 안내를 통해 함께 공지합니다.</p>
+
+      <h2 id="s10">10. 문의</h2>
+      <p>개인정보 관련 문의: <a href="mailto:gunug850@gmail.com">gunug850@gmail.com</a></p>
+
+      <nav class="legal-nav">
+        <a class="btn btn-ghost" href="index.html">← 홈으로</a>
+        <a class="btn btn-ghost" href="terms.html">이용약관 보기</a>
+      </nav>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/mark.svg" alt="" width="28" height="28">
+      <span>AutoFrame</span>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="privacy.html">개인정보 처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="../privacy.html" hreflang="en">English</a>
+    </nav>
+    <p class="copy">© <span id="year">2026</span> 원더랩(OneTheLab) · AutoFrame</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

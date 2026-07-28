@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoFrame — 가족 사진을 자동으로 보여주는 디지털 액자</title>
+<meta name="description" content="안 쓰는 태블릿을 가족 액자로. 내 Google Drive의 사진·동영상이 자동으로 넘어가고, 아이 나이와 기념일 경과 시간이 함께 표시됩니다.">
+<meta name="theme-color" content="#3949AB">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="ko" href="./">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="x-default" href="../">
+<meta property="og:title" content="AutoFrame — 가족 사진 디지털 액자">
+<meta property="og:description" content="안 쓰는 태블릿을 가족 액자로. 사진이 자동으로 넘어가고 아이 나이가 함께 표시됩니다.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/feature.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>document.documentElement.className += ' js';</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="8.6" cy="10" r="1.6"/><path d="M20.6 15.8l-4.4-4.4L6.6 20"/>
+  </symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7.5 18.5a4.2 4.2 0 0 1-.7-8.35A5.6 5.6 0 0 1 17.8 9.6a3.9 3.9 0 0 1-.3 8.9h-1.6"/><path d="M12 21.5V11"/><path d="M8.7 14.2L12 10.9l3.3 3.3"/>
+  </symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.8" y="4.5" width="18.4" height="15" rx="3"/><path d="M10.2 9.1l4.6 2.9-4.6 2.9z" fill="currentColor" stroke-width="1.4"/>
+  </symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 12a8 8 0 0 1 13.6-5.7l2 2"/><path d="M20 4.3v4.4h-4.4"/><path d="M20 12a8 8 0 0 1-13.6 5.7l-2-2"/><path d="M4 19.7v-4.4h4.4"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="6.6"/><path d="M15.8 15.8l4.6 4.6"/><path d="M8.6 11h4.8M11 8.6v4.8"/>
+  </symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.5 20.5h17"/><path d="M6.6 20.5v-5.2"/><path d="M12 20.5V8.4"/><path d="M17.4 20.5v-8.2"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4.1"/><path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.4 5.4l1.7 1.7M16.9 16.9l1.7 1.7M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7"/>
+  </symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2"/><path d="M12 3.4c2.3 2.4 3.5 5.4 3.5 8.6S14.3 18.2 12 20.6C9.7 18.2 8.5 15.2 8.5 12S9.7 5.8 12 3.4z"/>
+  </symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.5 2.8l1.9 5 5 1.9-5 1.9-1.9 5-1.9-5-5-1.9 5-1.9z"/><path d="M18 14.4l.95 2.45 2.45.95-2.45.95-.95 2.45-.95-2.45-2.45-.95 2.45-.95z"/>
+  </symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.2 20.6h17.6"/><path d="M5 20.6v-5.4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5.4"/><path d="M5 16.6c1.4 0 1.4 1.4 2.8 1.4s1.4-1.4 2.8-1.4 1.4 1.4 2.8 1.4 1.4-1.4 2.8-1.4 1.4 1.4 2.8 1.4"/><path d="M12 13.2V9.6"/><path d="M12 7.4c1-1 1-2 0-3-1 1-1 2 0 3z"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2.9l7.3 3v5.7c0 4.3-3 8-7.3 9.4-4.3-1.4-7.3-5.1-7.3-9.4V5.9z"/><path d="M8.9 12.1l2.3 2.3 4-4.4"/>
+  </symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 3.6l-7.7 7.7"/><path d="M11.5 10.5l4.6 4.6-1.6 1.7-7.1 2.7-2.6-2.6 2.7-7.1z"/><path d="M8.3 14.8l3.4 3.4"/><path d="M18.6 15.4l.62 1.68 1.68.62-1.68.62-.62 1.68-.62-1.68-1.68-.62 1.68-.62z"/>
+  </symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3.2"/>
+    <path d="M12 2.6l1.5 2.2 2.6-.6.4 2.7 2.5 1-1.2 2.4 1.7 2.1-2.2 1.6.4 2.7-2.7.2-1.1 2.5L12 20.4l-1.9 1-1.1-2.5-2.7-.2.4-2.7-2.2-1.6 1.7-2.1L5 9.9l2.5-1 .4-2.7 2.6.6z"/>
+  </symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.4 7.6l3.2 3.1 5.4-6 5.4 6 3.2-3.1-1.8 11H5.2z"/><path d="M5.2 20.4h13.6"/>
+  </symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4.6" y="10.2" width="14.8" height="10.2" rx="2.4"/><path d="M8.2 10.2V7.4a3.8 3.8 0 0 1 7.6 0v2.8"/><path d="M12 14.4v2.2"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#features">본문 바로가기</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img src="../assets/mark.svg" alt="" width="32" height="32">
+      <span>AutoFrame</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">기능</a>
+      <a href="#how">사용법</a>
+      <a href="#data">권한</a>
+      <a href="#pricing">가격</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="언어 선택">
+        <a class="is-on" href="./" aria-current="page" hreflang="ko">KO</a>
+        <a href="../" hreflang="en" data-lang-switch="en">EN</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="테마 전환">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">받기</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Android · 태블릿 · 폰</p>
+        <h1>AutoFrame</h1>
+        <p class="hero-tagline">가족 사진을 보여주는<br><span class="grad">디지털 액자</span></p>
+        <p class="lead">
+          <strong>AutoFrame</strong>은 안 쓰는 안드로이드 태블릿을 거실 디지털 액자로 바꿔주는 앱입니다.
+          내 Google Drive에 올린 사진·동영상이 부드럽게 넘어가고,
+          사진 위에 아이 나이와 기념일 경과 시간이 함께 뜹니다.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play에서 받기</a>
+          <a class="btn btn-ghost" href="#how">사용법 보기</a>
+        </div>
+        <ul class="hero-facts">
+          <li><strong>내 Drive</strong>에 저장</li>
+          <li><strong>사진 + 동영상</strong> 재생</li>
+          <li><strong>한국어 / English</strong></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="frame" id="frame">
+          <div class="frame-screen">
+            <img class="shot-img"
+                 src="../assets/screens/slideshow-1600.jpg"
+                 srcset="../assets/screens/slideshow-800.jpg 800w, ../assets/screens/slideshow-1600.jpg 1600w"
+                 sizes="(max-width: 900px) 100vw, 440px"
+                 width="1600" height="916"
+                 alt="태블릿에 띄운 AutoFrame 슬라이드쇼 화면 — 유모차에 앉은 아기 사진이 전체 화면으로 표시되고 있다">
+          </div>
+        </div>
+        <p class="frame-caption">실제 앱 화면에 가상의 AI 아기 사진으로 만들어진 목업입니다</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-inner reveal">
+        <span class="trust-ico" aria-hidden="true"><svg class="ic"><use href="#i-lock"/></svg></span>
+        <p>
+          AutoFrame은 모든 데이터를 <strong>이용자 본인의 Google 계정</strong>에 기록합니다.
+          회사는 별도의 서버를 운영하거나 이용자의 사진·데이터를 저장하지 않으며, 광고·분석 SDK도 사용하지 않습니다.
+          사용하는 Google API는 <strong>Google Drive API</strong> 하나이며,
+          <code>drive.file</code> 범위로 <strong>AutoFrame이 업로드했거나 이용자가 앱에서 직접 고른 파일만</strong> 읽고 씁니다.
+          Google 로그인(OAuth)은 사진·동영상을 이용자 본인의 Drive에 올리고 액자에서 다시 불러오기 위해 필요하며,
+          그 외의 Drive 파일·연락처·캘린더·메일은 요청하지도, 읽지도 않습니다.
+          <a href="#data">권한 자세히 보기</a> · <a href="privacy.html">개인정보 처리방침</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section section-aurora">
+    <div class="wrap">
+      <h2 class="reveal">액자에 <span class="grad">필요한 것만</span></h2>
+      <p class="section-lead reveal">복잡한 설정 없이, 켜두면 계속 돌아갑니다.</p>
+
+      <!-- 기본 -->
+      <div class="sub-head reveal">
+        <h3 class="sub-title">기본 기능</h3>
+        <span class="chip chip-free">무료</span>
+        <p class="sub-desc">설치만 하면 바로 쓸 수 있는 액자의 기본기.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal" style="--c:#F5A524">
+          <span class="ico"><svg class="ic"><use href="#i-photo"/></svg></span>
+          <h4>자동 슬라이드쇼</h4>
+          <p>일정 시간마다 크로스페이드로 부드럽게 전환. 탭 한 번으로 액자 모드가 켜집니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#3B82F6">
+          <span class="ico"><svg class="ic"><use href="#i-upload"/></svg></span>
+          <h4>사진 · 동영상 올리기</h4>
+          <p>갤러리에서 여러 장을 한 번에 업로드. 파일은 본인 Google Drive에 저장됩니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#8B5CF6">
+          <span class="ico"><svg class="ic"><use href="#i-play"/></svg></span>
+          <h4>동영상 재생</h4>
+          <p>영상은 끝까지 재생한 뒤 다음 항목으로. 재생 중 음소거를 켜고 끌 수 있습니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#14B8A6">
+          <span class="flag">NEW</span>
+          <span class="ico"><svg class="ic"><use href="#i-refresh"/></svg></span>
+          <h4>새 사진 자동 반영</h4>
+          <p>슬라이드쇼 중 새로 올린 사진이 자동으로 목록에 추가되고 안내 배너가 뜹니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#38BDF8">
+          <span class="ico"><svg class="ic"><use href="#i-search"/></svg></span>
+          <h4>사진 미리보기</h4>
+          <p>격자에서 사진을 탭하면 크게 열리고 확대·축소할 수 있습니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#F59E0B">
+          <span class="ico"><svg class="ic"><use href="#i-gauge"/></svg></span>
+          <h4>Drive 용량 확인 · 삭제</h4>
+          <p>사용량 / 전체 용량 / 사용률 게이지 표시. 여러 사진을 골라 직접 삭제도 가능합니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#FB923C">
+          <span class="ico"><svg class="ic"><use href="#i-sun"/></svg></span>
+          <h4>화면 꺼짐 방지</h4>
+          <p>액자처럼 24시간 켜둘 수 있게 화면 유지. 배터리 최적화 예외 안내도 함께 제공합니다.</p>
+        </article>
+        <article class="card reveal" style="--c:#6366F1">
+          <span class="ico"><svg class="ic"><use href="#i-globe"/></svg></span>
+          <h4>한국어 / English</h4>
+          <p>설정에서 언어를 바꾸면 앱 재시작 없이 모든 화면에 바로 적용됩니다.</p>
+        </article>
+      </div>
+
+      <!-- 프리미엄 -->
+      <div class="sub-head sub-head-premium reveal">
+        <h3 class="sub-title"><span class="grad-premium">프리미엄</span> 기능</h3>
+        <span class="chip chip-premium"><svg class="ic"><use href="#i-crown"/></svg>Premium</span>
+        <p class="sub-desc">액자를 오래, 예쁘게 쓰기 위한 기능들.</p>
+      </div>
+
+      <div class="grid grid-premium">
+        <article class="card card-premium reveal" style="--c:#A855F7">
+          <span class="ico"><svg class="ic"><use href="#i-sparkle"/></svg></span>
+          <h4>워터마크 제거</h4>
+          <p>슬라이드쇼 화면의 AutoFrame 워터마크가 사라집니다. 사진만 깨끗하게.</p>
+        </article>
+        <article class="card card-premium reveal" style="--c:#FB923C">
+          <span class="ico"><svg class="ic"><use href="#i-cake"/></svg></span>
+          <h4>인물 &amp; 이벤트</h4>
+          <p>인물의 생년월일, 이벤트 기준일을 등록하면 촬영 당시 나이와 현재 기준 경과 시간이 사진 위에 표시됩니다.</p>
+        </article>
+        <article class="card card-premium reveal" style="--c:#3B82F6">
+          <span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <h4>사진 보호</h4>
+          <p>중요한 사진을 보호해 두면 자동 정리와 일괄 삭제에서 제외됩니다.</p>
+        </article>
+        <article class="card card-premium reveal" style="--c:#22C55E">
+          <span class="ico"><svg class="ic"><use href="#i-broom"/></svg></span>
+          <h4>간편 저장공간 관리</h4>
+          <p>최근 N장만 남기고 정리, 사용률이 임계값을 넘으면 오래된 사진부터 자동 정리.</p>
+        </article>
+        <article class="card card-premium reveal" style="--c:#6366F1">
+          <span class="ico"><svg class="ic"><use href="#i-gear"/></svg></span>
+          <h4>슬라이드쇼 설정</h4>
+          <p>전환 주기, 사진 위 글씨 표시 여부와 크기를 취향대로 조절할 수 있습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="section section-alt">
+    <div class="wrap">
+      <h2 class="reveal">세 단계면 끝</h2>
+      <p class="section-lead reveal">설치하고 5분이면 거실에 액자가 생깁니다.</p>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-no">1</span>
+          <h3>전용 계정으로 로그인</h3>
+          <p>가족 공용 액자용 Google 계정으로 로그인합니다. 계정이 없으면 앱에서 바로 만들 수 있습니다.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-no">2</span>
+          <h3>사진 올리고 태그 달기</h3>
+          <p>갤러리에서 여러 장을 한 번에 업로드. 인물·이벤트를 등록해 두면 나이와 경과 시간이 자동 계산됩니다.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-no">3</span>
+          <h3>슬라이드쇼 켜고 세워두기</h3>
+          <p>슬라이드쇼 버튼 한 번. 안 쓰는 태블릿을 거치대에 올려두면 가족 액자 완성입니다.</p>
+        </li>
+      </ol>
+
+      <figure class="shot reveal">
+        <img class="shot-img"
+             src="../assets/screens/library-1600.jpg"
+             srcset="../assets/screens/library-800.jpg 800w, ../assets/screens/library-1600.jpg 1600w"
+             sizes="(max-width: 900px) 100vw, 900px"
+             width="1600" height="999" loading="lazy" decoding="async"
+             alt="AutoFrame 사진 목록 화면. 격자로 정렬된 가족 사진 위에 갤러리 선택 창이 열려 있다">
+        <figcaption>사진 목록 화면 — 갤러리에서 여러 장을 골라 한 번에 올립니다.<br>실제 앱 화면에 가상의 AI 아기 사진으로 만들어진 목업입니다.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section id="data" class="section">
+    <div class="wrap">
+      <h2 class="reveal">요청하는 <span class="grad">Google 권한</span>과 그 이유</h2>
+      <p class="section-lead reveal">AutoFrame이 Google 계정에 요청하는 권한은 아래가 전부입니다.</p>
+
+      <div class="grid">
+        <article class="card reveal" style="--c:#3B82F6">
+          <span class="ico"><svg class="ic"><use href="#i-upload"/></svg></span>
+          <h4>Drive 파일 접근 <code>drive.file</code></h4>
+          <p>
+            액자에 띄울 사진·동영상을 <strong>이용자 본인의 Google Drive</strong>에 올리고, 슬라이드쇼로 다시 불러오고, 앱에서 지우기 위해 필요합니다.
+            이 권한은 <strong>AutoFrame이 만들었거나 이용자가 앱에서 직접 고른 파일에만</strong> 적용됩니다. Drive에 이미 들어 있는 다른 사진·문서는 읽을 수 없습니다.
+          </p>
+        </article>
+        <article class="card reveal" style="--c:#8B5CF6">
+          <span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <h4>기본 계정 정보 <code>openid</code> <code>email</code> <code>profile</code></h4>
+          <p>
+            지금 어느 계정으로 액자가 돌아가는지 앱에 표시하고, 사진을 저장할 Drive 계정을 특정하기 위해 필요합니다.
+            연락처·캘린더·메일·사진 보관함 등 다른 Google 데이터는 요청하지 않습니다.
+          </p>
+        </article>
+        <article class="card reveal" style="--c:#14B8A6">
+          <span class="ico"><svg class="ic"><use href="#i-lock"/></svg></span>
+          <h4>회사 서버에는 저장하지 않습니다</h4>
+          <p>
+            사진·동영상과 인물·기념일 설정은 전부 이용자 본인의 Google Drive에 남습니다.
+            AutoFrame은 별도 서버를 운영하지 않고, 이용자의 Google 데이터를 수집·전송·판매하지 않으며, 광고·분석 SDK도 넣지 않았습니다.
+            앱에서 로그아웃하거나 Google 계정 설정에서 접근을 해제하면 연결이 끊깁니다.
+          </p>
+        </article>
+      </div>
+
+      <p class="section-note reveal">자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>에 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section section-alt">
+    <div class="wrap">
+      <h2 class="reveal">가격</h2>
+      <p class="section-lead reveal">무료로 써보고, 마음에 들면 프리미엄으로.</p>
+
+      <div class="price-grid">
+        <article class="price reveal">
+          <h3>월</h3>
+          <p class="amount">900<span>원</span></p>
+          <p class="per">매월 결제</p>
+          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">앱에서 시작</a>
+        </article>
+
+        <article class="price is-best reveal">
+          <span class="badge">가장 인기</span>
+          <h3>연</h3>
+          <p class="amount">7,900<span>원</span></p>
+          <p class="per">1년 · 월 약 658원</p>
+          <a class="btn btn-primary btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">앱에서 시작</a>
+        </article>
+
+        <article class="price reveal">
+          <h3>평생</h3>
+          <p class="amount">14,900<span>원</span></p>
+          <p class="per">한 번 결제, 계속 사용</p>
+          <a class="btn btn-ghost btn-block" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">앱에서 시작</a>
+        </article>
+      </div>
+
+      <p class="price-note reveal">
+        무료 버전에서는 슬라이드쇼에 워터마크가 표시되고 위 프리미엄 기능이 잠깁니다.
+        결제는 Google Play를 통해 처리되며, 구매는 앱 내에서 복원할 수 있습니다. 가격은 변경될 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="wrap wrap-narrow">
+      <h2 class="reveal">자주 묻는 질문</h2>
+
+      <div class="faq" id="faq-list">
+        <details class="reveal">
+          <summary>사진은 어디에 저장되나요?</summary>
+          <p>본인 Google Drive에 저장됩니다. AutoFrame은 사진을 <em>보여주는</em> 액자이며 별도 저장·백업을 책임지지 않습니다. 원본은 따로 보관하세요.</p>
+        </details>
+        <details class="reveal">
+          <summary>동영상도 되나요?</summary>
+          <p>됩니다. 슬라이드쇼에서 영상은 끝까지 재생된 뒤 다음 항목으로 넘어가고, 재생 중 음소거를 켜고 끌 수 있습니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>사진 위 나이는 어떻게 계산되나요?</summary>
+          <p>인물의 생년월일과 사진 촬영일을 비교해 <strong>촬영 당시 나이</strong>를, 오늘 날짜 기준으로 <strong>현재 나이</strong>를 함께 보여줍니다. 이벤트도 같은 방식으로 경과 시간을 표시합니다. 인물·이벤트 기능은 프리미엄입니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>Drive 용량이 꽉 차면요?</summary>
+          <p>사용량 게이지로 상태를 확인하고 직접 골라 지울 수 있습니다. 최근 N장만 남기기와 임계값 자동 정리는 프리미엄 기능입니다. 삭제는 영구적이라 복구되지 않습니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>계속 켜두면 문제 없나요?</summary>
+          <p>화면 꺼짐 방지 기능이 있고, 오래 켜둘 때 안정적으로 동작하도록 배터리 최적화 예외 등록을 안내합니다. 전원은 연결해 두는 걸 권장합니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>어떤 기기에서 쓸 수 있나요?</summary>
+          <p>Android 폰·태블릿·폴더블을 지원합니다. 화면 폭에 맞춰 격자 열 수가 자동으로 늘어납니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner reveal">
+      <h2>서랍 속 태블릿, 오늘부터 가족 액자로</h2>
+      <p>설치는 무료. 사진 몇 장이면 바로 시작할 수 있습니다.</p>
+      <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play에서 받기</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/mark.svg" alt="" width="28" height="28">
+      <span>AutoFrame</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#features">기능</a>
+      <a href="#data">권한</a>
+      <a href="#pricing">가격</a>
+      <a href="#faq">FAQ</a>
+      <a href="../" hreflang="en">English</a>
+      <a href="https://play.google.com/store/apps/details?id=com.onethelab.autoframe" target="_blank" rel="noopener">Google Play</a>
+    </nav>
+    <div class="legal-links">
+      <a class="btn btn-outline" href="privacy.html">개인정보 처리방침</a>
+      <a class="btn btn-outline" href="terms.html">이용약관</a>
+    </div>
+    <p class="copy">© <span id="year">2026</span> 원더랩(OneTheLab) · AutoFrame</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
