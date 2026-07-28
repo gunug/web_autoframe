@@ -140,7 +140,11 @@ html[data-theme="dark"] .btn-primary { color: #10131f; }
   padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
 }
 
-.hero h1 { font-size: clamp(32px, 5.2vw, 52px); }
+.hero h1 { font-size: clamp(34px, 5.4vw, 54px); }
+.hero-tagline {
+  margin-top: 10px; font-size: clamp(22px, 3.4vw, 34px);
+  font-weight: 700; letter-spacing: -.02em; line-height: 1.25; color: var(--text);
+}
 .grad {
   background: linear-gradient(100deg, var(--brand), var(--accent));
   -webkit-background-clip: text; background-clip: text; color: transparent;
