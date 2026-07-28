@@ -148,7 +148,11 @@
         <p>
           AutoFrame은 모든 데이터를 <strong>이용자 본인의 Google 계정</strong>에 기록합니다.
           회사는 별도의 서버를 운영하거나 이용자의 사진·데이터를 저장하지 않으며, 광고·분석 SDK도 사용하지 않습니다.
-          <a href="privacy.html">개인정보 처리방침</a>
+          사용하는 Google API는 <strong>Google Drive API</strong> 하나이며,
+          <code>drive.file</code> 범위로 <strong>AutoFrame이 업로드했거나 이용자가 앱에서 직접 고른 파일만</strong> 읽고 씁니다.
+          Google 로그인(OAuth)은 사진·동영상을 이용자 본인의 Drive에 올리고 액자에서 다시 불러오기 위해 필요하며,
+          그 외의 Drive 파일·연락처·캘린더·메일은 요청하지도, 읽지도 않습니다.
+          <a href="#data">권한 자세히 보기</a> · <a href="privacy.html">개인정보 처리방침</a>
         </p>
       </div>
     </div>

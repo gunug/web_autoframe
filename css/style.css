@@ -423,7 +423,7 @@ html[data-theme="dark"] .badge { color: #10131f; }
 .legal-body strong { color: var(--text); font-weight: 500; }
 .legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
 
-.legal-body code, .legal-meta code, .card code, .section-note code {
+.legal-body code, .legal-meta code, .card code, .section-note code, .trust code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: .9em; padding: 2px 6px; border-radius: 6px;
   background: var(--bg-alt); border: 1px solid var(--line); word-break: break-all;
